@@ -1,0 +1,84 @@
+{
+    "TOKEN": "MTI3MjIzMzYyNDY0MDQyNjA2NQ.GCvSzx.afKGrx81egNMm_lSbig7qSQJT8HS-mf0o59MVM",
+    "CLIENT_ID": "1272233624640426065",
+    "GUILD_ID": "1225158490901971105",
+    "LOG_CHANNEL_ID": "1272246422502113280",
+    "REPORT_CHANNEL_ID": "1272310357506916372",
+    "MAIN_REQUEST_CHANNEL_ID": "1272322280239927378",
+    "NOTIFICATION_CHANNEL_ID": "1272322280239927378",
+    
+    "GAMES": {
+        "The First Descendants": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2074920/header.jpg?t=1722399088",
+        "Conan Exiles": "https://upload.wikimedia.org/wikipedia/en/c/c7/Conan_Exiles_Game_Cover.jpg",
+        "MW3": "https://cdn.cloudflare.steamstatic.com/steam/apps/2519060/header.jpg?t=1713202728",
+        "MW2": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1962660/capsule_616x353.jpg?t=1710969334",
+        "MWZ": "https://staticg.sportskeeda.com/editor/2023/11/a388f-17003249839025-1920.jpg?w=640",
+        "Warzone": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1962663/header.jpg?t=1721859504",
+        "DMZ": "https://imageio.forbes.com/specials-images/imageserve/656a0f95363acce67eaf5c5d/0x0.jpg?format=jpg&height=600&width=1200&fit=bounds",
+        "Gray Zone Warfare": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2479810/header.jpg?t=1721116525",
+        "GTA (PC)": "https://www.gtabase.com/igallery/501-600/GTA_V_Official_Cover_Art-524-1920.jpg",
+        "GTA (Xbox S/X)": "https://www.gtabase.com/igallery/8501-8600/gta-v-cover-ps5-xbox-series-xs-8584-1920.jpg",
+        "GTA (Xbox One)": "https://www.gtabase.com/igallery/601-700/GTA_V_Cover_XboxOne-652-1920.jpg",
+        "GTA (Ps5)": "https://www.gtabase.com/igallery/8501-8600/gta-v-cover-ps5-xbox-series-xs-8584-1920.jpg",
+        "GTA (Ps4)": "https://www.gtabase.com/igallery/601-700/GTA_V_Cover_PS4-651-1920.jpg",
+        "Test (Testing Sys)": "https://i.sstatic.net/y9DpT.jpg"
+
+    }
+
+    "menuTemplates": {
+        "main": {
+            "embed": {
+                "title": "Play Request",
+                "description": "A new play request has been made.",
+                "fields": [
+                    {"name": "Play Request ID", "value": "{playRequestId}", "inline": true},
+                    {"name": "Game", "value": "{game}", "inline": true},
+                    {"name": "Requester", "value": "{requester}", "inline": true},
+                    {"name": "Message", "value": "{message}", "inline": false}
+                ],
+                "footer": "Use the buttons below to respond."
+            },
+            "actionRow": {
+                "buttons": [
+                    {"label": "Accept", "customId": "accept_{playRequestId}", "style": "SUCCESS"},
+                    {"label": "Deny", "customId": "deny_{playRequestId}", "style": "DANGER"},
+                    {"label": "Report", "customId": "report_{playRequestId}", "style": "SECONDARY"}
+                ]
+            }
+        },
+        "dm": {
+            "embed": {
+                "title": "Play Request Preview",
+                "description": "Here is a preview of the play request.",
+                "fields": [
+                    {"name": "Play Request ID", "value": "{playRequestId}", "inline": true},
+                    {"name": "Game", "value": "{game}", "inline": true},
+                    {"name": "Requester", "value": "{requester}", "inline": true}
+                ],
+                "footer": "No action buttons available."
+            }
+        },
+        "report": {
+            "embed": {
+                "title": "Play Request Report",
+                "description": "Details of the reported play request.",
+                "fields": [
+                    {"name": "Play Request ID", "value": "{playRequestId}", "inline": true},
+                    {"name": "Game", "value": "{game}", "inline": true},
+                    {"name": "Requester", "value": "{requester}", "inline": true},
+                    {"name": "Message", "value": "{message}", "inline": false},
+                    {"name": "Reason", "value": "{reason}", "inline": true},
+                    {"name": "Reported By", "value": "{reportedBy}", "inline": true}
+                ],
+                "footer": "Manage the request using the buttons below."
+            },
+            "actionRow": {
+                "buttons": [
+                    {"label": "Delete", "customId": "delete_{playRequestId}", "style": "DANGER"},
+                    {"label": "Ban Requester", "customId": "ban_{requester}", "style": "DANGER"},
+                    {"label": "Warn", "customId": "warn_{requester}", "style": "SECONDARY"}
+                ]
+            }
+        }
+    }
+}
